@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  justify-content: center;
+  background: rgb(0, 0, 0);
+  flex-direction: column;
+}
+
+.backgroundImages {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 40%;
+  margin-top: 2.5%;
+}
+
+.bannerWrapper {
+  position: absolute;
+  width: 75%;
+  height: 30%;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+}
+
+.logoWrapper {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logoImage {
+  margin: 20px;
+  width: 15%;
+  height: 40%;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.link {
+  margin: 5px 5px;
+  color: white;
+  padding: 0 20px;
+  z-index: 1;
+}

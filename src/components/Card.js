@@ -8,6 +8,7 @@ function Card(props) {
     <div className={styles.container}>
       <div className={styles.title}>{props.faction.name}</div>
       <div className={styles.flagWrapper}>
+        {/* <div className={styles.title}>{props.faction.name}</div> */}
         <img src={props.flag} className={styles.flag} alt="Banner" />
       </div>
     </div>

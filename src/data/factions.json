@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Lothlorien",
+    "specialUnit": "Marchwarden",
+    "type": "Elf",
+    "flag": "loth"
+  },
+  {
+    "name": "Erabor",
+    "specialUnit": "Iron Warrior",
+    "type": "Dwarf",
+    "flag": "erabor"
+  }
+]

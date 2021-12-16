@@ -1,16 +1,26 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Header.module.css";
-import { APP_HEADERS } from "../config/const";
+import { APP_PAGES } from "../constants/default";
+import { connect, batch } from "react-redux";
 import banner from "../assets/lotr_rtw_banner.jpg";
 import logo from "../assets/logo.png";
+import { addNewPage } from "../actions/navigation";
 
-function Header() {
+function Header(props) {
   const [appHeaders, setAppHeaders] = useState([]);
 
   useEffect(() => {
     setAppHeaders(
-      APP_HEADERS.map((appHeader) => {
-        return <div className={styles.link}>{appHeader.label}</div>;
+      APP_PAGES.map((appPages) => {
+        const onClick = (event) => {
+          event.preventDefault();
+          props.addNewPage(appPages.value);
+        };
+        return (
+          <div className={styles.link} onClick={onClick} key={appPages.value}>
+            {appPages.label}
+          </div>
+        );
       })
     );
   }, []);
@@ -29,5 +39,10 @@ function Header() {
     </div>
   );
 }
+function mapStateToProps(state) {
+  const {} = state;
+  return {};
+}
+const mapDispatchToProps = { addNewPage };
 
-export default Header;
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

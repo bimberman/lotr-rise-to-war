@@ -1,0 +1,2 @@
+export const ADD_NEW_PAGE = "ADD_NEW_PAGE";
+export const SET_ACTIVE_FACTION = "SET_ACTIVE_FACTION";
